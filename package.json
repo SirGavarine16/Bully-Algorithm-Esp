@@ -1,0 +1,21 @@
+{
+  "name": "bully-algorithm",
+  "version": "1.0.0",
+  "description": "Implementación del algoritmo Bully de Sistemas Distribuidos en un ejemplo didáctico hecho con NodeJS basado en promesas.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Algoritmo",
+    "Bully",
+    "Sistemas",
+    "Distribuidos"
+  ],
+  "author": "ilyAkagi",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.2"
+  }
+}
