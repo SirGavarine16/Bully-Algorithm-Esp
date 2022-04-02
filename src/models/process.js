@@ -66,6 +66,10 @@ class Process {
          * Si el proceso está inactivo, no hace nada.
          */
         if (!this.isActive) return;
+        /**
+         * Si el proceso ha sido arrancado de nuevo pero no tiene conocimiento del coordinador, lo investiga.
+         */
+        this.setCoordinate(this.processes.find((p) => p.isCoordinate));
         return new Promise((resolve, reject) => {
             /**
              * Despues de un plazo de tiempo entre 500 a 1000 milisegundos se envía el mensaje.

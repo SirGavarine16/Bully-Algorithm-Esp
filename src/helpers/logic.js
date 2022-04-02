@@ -59,7 +59,7 @@ const stopProcesses = async (processesArray) => {
     processesArray.forEach((p) => {
         if (pids.includes(p.pid)) {
             p.setIsActive(false);
-            console.log(`El proceso con PID ${p.pid} ha sido detenido.`.gray);
+            console.log(`El proceso con PID:${p.pid} ha sido detenido.`.gray);
         }
     });
 }
@@ -73,9 +73,9 @@ const startProcesses = async (processesArray) => {
     processesArray.forEach((p) => {
         if (pids.includes(p.pid)) {
             p.setIsActive(true);
-            console.log(`El proceso con PID ${p.pid} ha sido iniciado.`.gray);
+            console.log(`El proceso con PID:${p.pid} ha sido iniciado.`.gray);
         }
-    })
+    });
 }
 
 /**
@@ -102,7 +102,7 @@ const runSimulation = async (processesArray) => {
 
                 await runBullyAlgorithm(processesArray, initialPid, oldCoordinatePid);
                 resolve();
-            }, 1000)
+            }, 1000);
         }
     })
 }
